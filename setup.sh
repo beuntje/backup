@@ -26,5 +26,9 @@ FSTABFILE="/home/benedikt/web/woodwing/temp/test/fstab.txt"
 if [ ! -n "$(grep -P "[[:space:]]/mnt/backup/[[:space:]]" $FSTABFILE)" ]; then
   sudo printf "\n//$IP/backups  /mnt/backup/  cifs  user=$USERNAME,password=$PASSWORD,vers=1.0,_netdev,x-systemd.automount  0  0" | sudo tee -a "$FSTABFILE" >/dev/null
   echo "Mount added "
+  mount -o remount -a
 fi
+
+# FURTHER SETUP
+sh /mnt/backup/makebackup.sh
 

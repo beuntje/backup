@@ -10,7 +10,7 @@ sudo apt-get install git
 
 Then download this repo:
 ```
-git clone https://github.com/beuntje/backup/setup.sh
+git clone https://github.com/beuntje/backup 
 ```
 
 Make the installer executable:
