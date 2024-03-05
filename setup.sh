@@ -32,3 +32,7 @@ fi
 # FURTHER SETUP
 sh /mnt/backup/makebackup.sh
 
+# REMOVE SCRIPT
+BASEDIR=$(dirname $0)
+rm -r $BASEDIR
+
