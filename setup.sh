@@ -1,7 +1,5 @@
 #!/bin/bash
 
-BASEDIR=$(pwd)
-
 if [ "$1" = "" ] || [ "$2" = "" ] || [ "$3" = "" ]; then
   echo "USAGE: "
   echo "setup.sh IP USERNAME PASSWORD"
