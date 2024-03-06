@@ -22,7 +22,7 @@ FSTABFILE="/etc/fstab"
 if [ ! -n "$(grep -P "[[:space:]]/mnt/backup/[[:space:]]" $FSTABFILE)" ]; then
   sudo printf "\n//$IP/backups  /mnt/backup/  cifs  user=$USERNAME,password=$PASSWORD,vers=1.0,_netdev,x-systemd.automount  0  0" | sudo tee -a "$FSTABFILE" >/dev/null
   echo "Mount added "
-  sudo mount -o remount -a
+  sudo mount -av
 fi
 
 # FURTHER SETUP
