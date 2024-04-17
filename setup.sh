@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$1" = "" ] || [ "$2" = "" ] || [ "$3" = "" ]; then
+if [ "$1" = "" ] || [ "$2" = "" ] || [ "$3" = "" ] || [ "$1" = "IP" ] || [ "$2" = "USERNAME" ] || [ "$1" = "PASSWORD" ] ; then
   echo "USAGE: "
   echo "setup.sh IP USERNAME PASSWORD"
   exit
